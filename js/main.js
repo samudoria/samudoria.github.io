@@ -52,10 +52,10 @@ pubblications.addEventListener("click", () => {
         background: "#00aa00",
         width: "800px",
         height: "400px",
-        top: 150,
-        right: 150,
+        top: 500,
+        right: 50,
         bottom: 75,
-        left: 250,
+        left: 500,
         mount: pubscontent,
         onfocus: function () {
             this.setBackground("#00aa00");
