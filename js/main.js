@@ -26,16 +26,27 @@ about.addEventListener("click", () => {
     });
 });
 
+var contactTop = 150;
+var contactRight = 50;
+var contactBottom = 50;
+var contactLeft = 150;
+if (window.innerWidth < 1220) {
+    var contactTop = 50;
+    var contactRight = 50;
+    var contactBottom = 50;
+    var contactLeft = 50;
+}
+
 contact.addEventListener("click", () => {
     const contactBox = new WinBox({
         title: "contact me",
         background: "#00aa00",
         width: "400px",
         height: "400px",
-        top: 150,
-        right: 50,
-        bottom: 50,
-        left: 250,
+        top: contactTop,
+        right: contactRight,
+        bottom: contactBottom,
+        left: contactLeft,
         mount: contactcontent,
         onfocus: function () {
             this.setBackground("#00aa00");
@@ -46,16 +57,27 @@ contact.addEventListener("click", () => {
     });
 });
 
+var pubsTop = 500;
+var pubsRight = 50;
+var pubsBottom = 75;
+var pubsLeft = 500;
+if (window.innerWidth < 1220) {
+    var pubsTop = 50;
+    var pubsRight = 50;
+    var pubsBottom = 50;
+    var pubsLeft = 50;
+}
+
 pubblications.addEventListener("click", () => {
     const contactBox = new WinBox({
         title: "pubblications",
         background: "#00aa00",
-        width: "800px",
+        width: "500px",
         height: "400px",
-        top: 500,
-        right: 50,
-        bottom: 75,
-        left: 500,
+        top: pubsTop,
+        right: pubsRight,
+        bottom: pubsBottom,
+        left: pubsLeft,
         mount: pubscontent,
         onfocus: function () {
             this.setBackground("#00aa00");
