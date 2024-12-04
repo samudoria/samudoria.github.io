@@ -1,11 +1,14 @@
 const about = document.querySelector("#about");
 const contact = document.querySelector("#contact");
+const pubblications = document.querySelector("#pubs");
 const aboutContent = document.querySelector("#about-content");
-const contactContent = document.querySelector("#contact-content");
+const contactcontent = document.querySelector("#contact-content");
+const pubscontent = document.querySelector("#pubs-content");
+
 
 about.addEventListener("click", () => {
     const aboutBox = new WinBox({
-        title: "About Me",
+        title: "about me",
         //modal: true,
         width: "400px",
         height: "400px",
@@ -25,7 +28,7 @@ about.addEventListener("click", () => {
 
 contact.addEventListener("click", () => {
     const contactBox = new WinBox({
-        title: "Contact Me",
+        title: "contact me",
         background: "#00aa00",
         width: "400px",
         height: "400px",
@@ -33,7 +36,27 @@ contact.addEventListener("click", () => {
         right: 50,
         bottom: 50,
         left: 250,
-        mount: contactContent,
+        mount: contactcontent,
+        onfocus: function () {
+            this.setBackground("#00aa00");
+        },
+        onblur: function () {
+            this.setBackground("#777");
+        },
+    });
+});
+
+pubblications.addEventListener("click", () => {
+    const contactBox = new WinBox({
+        title: "pubblications",
+        background: "#00aa00",
+        width: "800px",
+        height: "400px",
+        top: 150,
+        right: 150,
+        bottom: 75,
+        left: 250,
+        mount: pubscontent,
         onfocus: function () {
             this.setBackground("#00aa00");
         },
@@ -65,7 +88,7 @@ $.fn.typewriter = function () {
                 else for (; ">" != b.substring(a, a + 1); ) a++;
             }
             c.html(b.substring(d, a++) + (a & 1 ? "_" : ""));
-            a >= b.length || setTimeout(e, 30 * Math.random());
+            a >= b.length || setTimeout(e, 15 * Math.random());
         };
         e();
     });

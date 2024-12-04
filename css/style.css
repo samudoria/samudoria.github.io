@@ -49,6 +49,7 @@ a {
 
 li {
   font-size: 115%;
+  display: inline;
 }
 
 p {
@@ -56,13 +57,23 @@ p {
 }
 
 nav {
-  width: 30%;
+  width: 40%;
 }
 
 nav ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 1em;
+}
+
+/* Media query for responsive design */
+@media (max-width: 1220px) {
+  nav ul {
+    flex-direction: column; /* Stacks the items vertically */
+    align-items: flex-start; /* Aligns items to the start of the container */
+    gap: 0.5em; /* Adjust gap for better spacing in vertical layout */
+  }
 }
 
 nav ul li {
@@ -71,7 +82,7 @@ nav ul li {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 2000px;
   margin: auto;
   height: 92vh;
   display: flex;
