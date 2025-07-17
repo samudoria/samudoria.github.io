@@ -1,9 +1,7 @@
 const about = document.querySelector("#about");
 const contact = document.querySelector("#contact");
-const pubblications = document.querySelector("#pubs");
 const aboutContent = document.querySelector("#about-content");
 const contactcontent = document.querySelector("#contact-content");
-const pubscontent = document.querySelector("#pubs-content");
 
 
 about.addEventListener("click", () => {
@@ -57,36 +55,6 @@ contact.addEventListener("click", () => {
     });
 });
 
-var pubsTop = 500;
-var pubsRight = 50;
-var pubsBottom = 75;
-var pubsLeft = 500;
-if (window.innerWidth < 1220) {
-    var pubsTop = 50;
-    var pubsRight = 50;
-    var pubsBottom = 50;
-    var pubsLeft = 50;
-}
-
-pubblications.addEventListener("click", () => {
-    const contactBox = new WinBox({
-        title: "pubblications",
-        background: "#00aa00",
-        width: "500px",
-        height: "400px",
-        top: pubsTop,
-        right: pubsRight,
-        bottom: pubsBottom,
-        left: pubsLeft,
-        mount: pubscontent,
-        onfocus: function () {
-            this.setBackground("#00aa00");
-        },
-        onblur: function () {
-            this.setBackground("#777");
-        },
-    });
-});
 
 // Typewriter.js
 // https://github.com/ronv/Typewriter.js
@@ -107,7 +75,7 @@ $.fn.typewriter = function () {
                 else if (b.substring(a, b.length).match(g))
                     (d = a),
                         (a += b.substring(a, b.length).indexOf("</span>") + 7);
-                else for (; ">" != b.substring(a, a + 1); ) a++;
+                else for (; ">" != b.substring(a, a + 1);) a++;
             }
             c.html(b.substring(d, a++) + (a & 1 ? "_" : ""));
             a >= b.length || setTimeout(e, 15 * Math.random());
