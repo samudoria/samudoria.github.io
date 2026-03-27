@@ -89,6 +89,25 @@ nav ul li {
   cursor: pointer;
 }
 
+.nav-action {
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 115%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-action:hover {
+  color: #0f0;
+}
+
+.nav-action:focus-visible {
+  outline: 1px dashed var(--text-color);
+  outline-offset: 4px;
+}
+
 .container {
   max-width: 2000px;
   margin: auto;
@@ -110,7 +129,7 @@ nav ul li {
 
 .cursor {
   font-weight: 700;
-  animation: 1s blink step-end infinite;
+  animation: 0.6s blink step-end infinite;
 }
 
 @keyframes blink {

@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
   <title>Samuele Doria</title>
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 </head>
@@ -15,8 +14,8 @@
   <div class="container">
     <nav>
       <ul>
-        <li id="about">/whoami</li>	
-        <li id="contact">/contact</li>
+        <li><button class="nav-action" id="about" type="button">/whoami</button></li>
+        <li><button class="nav-action" id="contact" type="button">/contact</button></li>
         <li id="resume"><a class="resume" target="_blank" href="cv/CV_Samuele_Doria.pdf">/resume</a></li>
       </ul>
     </nav>
@@ -82,8 +81,8 @@
     </div>
   </div>
 
-  <script src="js/winbox.bundle.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/winbox.bundle.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
